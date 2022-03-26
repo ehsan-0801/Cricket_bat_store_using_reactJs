@@ -40,11 +40,13 @@
     display: flex;
     align-items: center;
     justify-content: center;
-
 }
+
 .btn-cart:hover{
-    background: orange;
+    background: #160c6d;
+    color: white;
 }
 .btn_text{
     margin-right: 5px;
+    margin-top:10px;
 }

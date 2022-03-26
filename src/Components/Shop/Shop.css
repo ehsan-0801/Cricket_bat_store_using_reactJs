@@ -4,11 +4,17 @@
 .cart_container{
     display: grid;
     grid-template-columns: 4fr 1fr;
+    background: #ced4da;
 }
 .product_contianer{
     display: grid;
     grid-template-columns: repeat(3,1fr);
     gap: 45px;
+}
+.cartimg{
+    width: 50px;
+    border: 2px #000000 solid;
+    border-radius:50%
 }
 @media screen and (max-width: 600px ){
     .product_contianer{
