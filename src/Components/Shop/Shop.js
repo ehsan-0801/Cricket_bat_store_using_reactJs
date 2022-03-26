@@ -2,9 +2,8 @@ import React, { Component } from 'react';
 import { useEffect, useState } from 'react';
 import Product from '../Product/Product';
 import './Shop.css'
-import Alert from 'react-bootstrap/Alert'
-import { Button } from 'react-bootstrap';
 const Shop = () => {
+    //useStates
     const [products, setProducts] = useState([]);
     const [cart, setCart] = useState([]);
      useEffect(()=>{
@@ -12,7 +11,7 @@ const Shop = () => {
          .then(res => res.json())
          .then(data => setProducts(data))
      },[]) 
-     
+     //add to cart 
      const handleAddToCart = (product)=>{
         const newcart = [...cart, product];
         const uniqeArray = newcart.filter((item, index) => newcart.indexOf(item) === index);
@@ -28,6 +27,7 @@ const Shop = () => {
      const emptylist=()=>{
         setCart([])
      }
+     //randomly choosen one.
      const randomChooseOne = (cart)=> {
         const index = Math.round((Math.random() * 3));
         console.log(index)
