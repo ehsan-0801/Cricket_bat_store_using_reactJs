@@ -19,14 +19,21 @@ const Shop = () => {
         if(uniqeArray.length <= 4){
             setCart(uniqeArray);
             console.log(uniqeArray)
-           
         }
         else{
+            alert("You can not choose more than 4")
         }
         
      }
      const emptylist=()=>{
         setCart([])
+     }
+     const randomChooseOne = (cart)=> {
+        const index = Math.round((Math.random() * 3));
+        console.log(index)
+        const randomProduct = cart[index]
+        console.log(randomProduct)
+        setCart([randomProduct])
      }
     return (
         <div className="bg-custom">
@@ -52,10 +59,9 @@ const Shop = () => {
                             ))
                             
                         }
-                        <button className='btn btn-primary px-5'>Choose 1 For me</button>
+                        <button onClick={() =>randomChooseOne(cart)} className='btn btn-primary px-5'>Choose 1 For me</button>
                         <button onClick={() =>emptylist()} className='btn btn-danger px-5'>Choose Again</button>
                     </div>
-                    
                 </div>
             </div>
         </div>
