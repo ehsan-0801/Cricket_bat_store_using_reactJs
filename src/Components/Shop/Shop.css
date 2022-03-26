@@ -14,7 +14,7 @@
 .cartimg{
     width: 50px;
     border: 2px #000000 solid;
-    border-radius:50%
+    border-radius:5%
 }
 @media screen and (max-width: 600px ){
     .product_contianer{
