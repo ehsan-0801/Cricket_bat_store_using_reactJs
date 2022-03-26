@@ -19,10 +19,14 @@ const Shop = () => {
         if(uniqeArray.length <= 4){
             setCart(uniqeArray);
             console.log(uniqeArray)
+           
         }
         else{
         }
         
+     }
+     const emptylist=()=>{
+        setCart([])
      }
     return (
         <div className="bg-custom">
@@ -46,9 +50,10 @@ const Shop = () => {
                                      <h6 className="text-primary col-md-10" >{product.name} </h6>
                                 </div>
                             ))
+                            
                         }
                         <button className='btn btn-primary px-5'>Choose 1 For me</button>
-                        <button className='btn btn-danger px-5'>Choose Again</button>
+                        <button onClick={() =>emptylist()} className='btn btn-danger px-5'>Choose Again</button>
                     </div>
                     
                 </div>
